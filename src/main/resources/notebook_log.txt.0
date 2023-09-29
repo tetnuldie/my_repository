@@ -1,0 +1,24 @@
+Sept 29, 2023 5:51:41 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=test/content=logging/
+Processed successfully
+Sept 29, 2023 6:11:58 PM edu.examples.java_classes.controller.impl.GetNoteCommand execute
+SEVERE: Error on resolve all items
+edu.examples.java_classes.logic.LogicException: edu.examples.java_classes.dao.DaoException: java.text.ParseException: Unparseable date: "Thu Sepfdvnk 28 sdfs21:36:06 CsdfsfEST 2023"
+	at java_notebook/edu.examples.java_classes.logic.impl.NotebookLogicImpl.allNotes(NotebookLogicImpl.java:138)
+	at java_notebook/edu.examples.java_classes.logic.impl.NotebookLogicImpl.getAllNotes(NotebookLogicImpl.java:130)
+	at java_notebook/edu.examples.java_classes.controller.impl.GetNoteCommand.execute(GetNoteCommand.java:27)
+	at java_notebook/edu.examples.java_classes.controller.Controller.doAction(Controller.java:16)
+	at java_notebook/edu.examples.java_classes.input.command.request.ConsoleFindItemByContent.execute(ConsoleFindItemByContent.java:37)
+	at java_notebook/edu.examples.java_classes.input.command.navigation.ConsoleShowFindMenu.execute(ConsoleShowFindMenu.java:20)
+	at java_notebook/edu.examples.java_classes.input.command.navigation.ConsoleShowMainMenu.execute(ConsoleShowMainMenu.java:20)
+	at java_notebook/edu.examples.java_classes.input.ConsoleMenu.execute(ConsoleMenu.java:12)
+	at java_notebook/edu.examples.java_classes.start.Main.main(Main.java:26)
+Caused by: edu.examples.java_classes.dao.DaoException: java.text.ParseException: Unparseable date: "Thu Sepfdvnk 28 sdfs21:36:06 CsdfsfEST 2023"
+	at java_notebook/edu.examples.java_classes.dao.impl.FileNoteBookDao.getNotes(FileNoteBookDao.java:43)
+	at java_notebook/edu.examples.java_classes.logic.impl.NotebookLogicImpl.allNotes(NotebookLogicImpl.java:136)
+	... 8 more
+Caused by: java.text.ParseException: Unparseable date: "Thu Sepfdvnk 28 sdfs21:36:06 CsdfsfEST 2023"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at java_notebook/edu.examples.java_classes.dao.impl.FileNoteBookDao.getNotes(FileNoteBookDao.java:38)
+	... 9 more
+
