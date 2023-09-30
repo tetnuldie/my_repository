@@ -1,5 +1,6 @@
 package edu.examples.java_classes.logic;
 
+import java.text.ParseException;
 import java.util.Date;
 import java.util.List;
 
@@ -23,7 +24,7 @@ public interface NotebookLogic {
 
     void deleteNote (int id) throws LogicException;
 
-    List<Note> findByDate(String dateStr) throws LogicException;
+    List<Note> findByDate(String dateStr) throws LogicException, ParseException;
 
     List<Note> getAllNotes() throws LogicException;
 

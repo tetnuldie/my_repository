@@ -13,7 +13,7 @@ public class ConsoleShowFindMenu extends NavigationCommand implements Executable
         ConcreteMenu menu = super.menuSystem.getMenu(displayMenu);
         CommandProvider provider = CommandProvider.getInstance();
 
-        menuShown = 2;
+        menuShown = 1;
 
         int decision = super.makeChoice(menu);
 
@@ -25,6 +25,7 @@ public class ConsoleShowFindMenu extends NavigationCommand implements Executable
 
     public MenuCommand getMenuCommand(int code) {
         return switch (code) {
+            case 4 -> MenuCommand.GET_ALL_NOTES;
             case 5 -> MenuCommand.FIND_BY_DATE;
             case 6 -> MenuCommand.FIND_BY_CONTENT;
             case 0 -> MenuCommand.SHOW_MAIN_MENU;

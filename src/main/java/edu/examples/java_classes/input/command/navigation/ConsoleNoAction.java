@@ -19,8 +19,8 @@ public class ConsoleNoAction extends NavigationCommand implements Executable {
 
     public MenuCommand getMenuCommand(int code) {
         return switch (code) {
-            case 2 -> MenuCommand.SHOW_SEARCH_MENU;
-            case 4 -> MenuCommand.EDIT_NOTE_MENU;
+            case 1 -> MenuCommand.SHOW_SEARCH_MENU;
+            case 3 -> MenuCommand.EDIT_NOTE_MENU;
             default -> MenuCommand.SHOW_MAIN_MENU;
         };
 

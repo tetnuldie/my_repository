@@ -13,14 +13,15 @@ public final class MenuBuilder {
 		ConcreteMenu cm1 = new ConcreteMenu("MAIN MENU");
 		cm1.setItems(MenuCommand.CREATE_NEW_ITEM.getConsoleCode(), "Create new note.");
 		cm1.setItems(MenuCommand.SHOW_SEARCH_MENU.getConsoleCode(),"Search notes.");
-		cm1.setItems(MenuCommand.EXIT_CODE.getConsoleCode(),"EXIT");
+		cm1.setItems(MenuCommand.EXIT_CODE.getConsoleCode(),"CLOSE APP");
 		cm1.setItems(MenuCommand.EDIT_NOTE_MENU.getConsoleCode(),"Notes manager.");
 
 		menuSystem.add(Menu.MAIN_MENU, cm1);
 
 		ConcreteMenu cm2 = new ConcreteMenu("SEARCH NOTES");
+		cm2.setItems(MenuCommand.GET_ALL_NOTES.getConsoleCode(),"Find all notes.");
 		cm2.setItems(MenuCommand.FIND_BY_DATE.getConsoleCode(),"Find note by date.");
-		cm2.setItems(MenuCommand.FIND_BY_CONTENT.getConsoleCode(),"Find note by content / All notes.");
+		cm2.setItems(MenuCommand.FIND_BY_CONTENT.getConsoleCode(),"Find note by content");
 		cm2.setItems(MenuCommand.EXIT_CODE.getConsoleCode(), "BACK.");
 
 		menuSystem.add(Menu.SEARCH_MENU, cm2);

@@ -13,7 +13,7 @@ public class ConsoleShowMainMenu extends NavigationCommand implements Executable
         ConcreteMenu menu = super.menuSystem.getMenu(displayMenu);
         CommandProvider provider = CommandProvider.getInstance();
 
-        menuShown = 1;
+        menuShown = 99;
 
         int decision = super.makeChoice(menu);
 
@@ -25,9 +25,9 @@ public class ConsoleShowMainMenu extends NavigationCommand implements Executable
 
     public MenuCommand getMenuCommand(int code) {
         return switch (code) {
-            case 2 -> MenuCommand.SHOW_SEARCH_MENU;
-            case 3 -> MenuCommand.CREATE_NEW_ITEM;
-            case 4 -> MenuCommand.EDIT_NOTE_MENU;
+            case 1 -> MenuCommand.SHOW_SEARCH_MENU;
+            case 2 -> MenuCommand.CREATE_NEW_ITEM;
+            case 3 -> MenuCommand.EDIT_NOTE_MENU;
             case 0 -> MenuCommand.EXIT_CODE;
             default -> MenuCommand.NO_MENU_ACTION;
         };

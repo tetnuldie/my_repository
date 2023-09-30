@@ -22,3 +22,182 @@ Caused by: java.text.ParseException: Unparseable date: "Thu Sepfdvnk 28 sdfs21:3
 	at java_notebook/edu.examples.java_classes.dao.impl.FileNoteBookDao.getNotes(FileNoteBookDao.java:38)
 	... 9 more
 
+Sept 30, 2023 2:47:34 PM edu.examples.java_classes.controller.impl.GetNoteCommand execute
+SEVERE: Error on resolve all items
+edu.examples.java_classes.logic.LogicException: edu.examples.java_classes.dao.DaoException: java.text.ParseException: Unparseable date: "Thu Sepfdvnk 28 sdfs21:36:06 CsdfsfEST 2023"
+	at java_notebook/edu.examples.java_classes.logic.impl.NotebookLogicImpl.allNotes(NotebookLogicImpl.java:138)
+	at java_notebook/edu.examples.java_classes.logic.impl.NotebookLogicImpl.getAllNotes(NotebookLogicImpl.java:130)
+	at java_notebook/edu.examples.java_classes.controller.impl.GetNoteCommand.execute(GetNoteCommand.java:22)
+	at java_notebook/edu.examples.java_classes.controller.Controller.doAction(Controller.java:16)
+	at java_notebook/edu.examples.java_classes.input.command.request.ConsoleFindItemByContent.execute(ConsoleFindItemByContent.java:37)
+	at java_notebook/edu.examples.java_classes.input.command.navigation.ConsoleShowFindMenu.execute(ConsoleShowFindMenu.java:21)
+	at java_notebook/edu.examples.java_classes.input.command.navigation.ConsoleShowMainMenu.execute(ConsoleShowMainMenu.java:21)
+	at java_notebook/edu.examples.java_classes.input.ConsoleMenu.execute(ConsoleMenu.java:12)
+	at java_notebook/edu.examples.java_classes.start.Main.main(Main.java:26)
+Caused by: edu.examples.java_classes.dao.DaoException: java.text.ParseException: Unparseable date: "Thu Sepfdvnk 28 sdfs21:36:06 CsdfsfEST 2023"
+	at java_notebook/edu.examples.java_classes.dao.impl.FileNoteBookDao.getNotes(FileNoteBookDao.java:43)
+	at java_notebook/edu.examples.java_classes.logic.impl.NotebookLogicImpl.allNotes(NotebookLogicImpl.java:136)
+	... 8 more
+Caused by: java.text.ParseException: Unparseable date: "Thu Sepfdvnk 28 sdfs21:36:06 CsdfsfEST 2023"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at java_notebook/edu.examples.java_classes.dao.impl.FileNoteBookDao.getNotes(FileNoteBookDao.java:38)
+	... 9 more
+
+Sept 30, 2023 2:49:22 PM edu.examples.java_classes.controller.impl.GetNoteCommand execute
+INFO: GET\s\?content=ALL
+Processed successfully
+Sept 30, 2023 2:49:42 PM edu.examples.java_classes.controller.impl.GetNoteByTimeCommand execute
+INFO: GET_TIME\s\?date=2023-09-29
+Processed successfully
+Sept 30, 2023 2:50:27 PM edu.examples.java_classes.controller.impl.DeleteAllNotesCommand execute
+INFO: DELETE_ALL\s
+Processed successfully
+Sept 30, 2023 2:50:38 PM edu.examples.java_classes.controller.impl.DeleteNoteCommand execute
+INFO: DELETE\s\?id=1
+Processed successfully
+Sept 30, 2023 2:51:01 PM edu.examples.java_classes.controller.impl.GetNoteByTimeCommand execute
+INFO: GET_TIME\s\?date=2023-09-30
+Processed successfully
+Sept 30, 2023 3:25:51 PM edu.examples.java_classes.controller.impl.GetAllNotesCommand execute
+INFO: GET_ALL\s\?
+Processed successfully
+Sept 30, 2023 3:26:09 PM edu.examples.java_classes.controller.impl.GetNoteByTimeCommand execute
+INFO: GET_TIME\s\?date=2023-09-28
+Processed successfully
+Sept 30, 2023 3:26:15 PM edu.examples.java_classes.controller.impl.GetNoteByTimeCommand execute
+SEVERE: Error on resolve items by date
+edu.examples.java_classes.logic.LogicException: java.text.ParseException: Unparseable date: "dbdfb"
+	at java_notebook/edu.examples.java_classes.logic.impl.NotebookLogicImpl.findByDate(NotebookLogicImpl.java:115)
+	at java_notebook/edu.examples.java_classes.controller.impl.GetNoteByTimeCommand.execute(GetNoteByTimeCommand.java:20)
+	at java_notebook/edu.examples.java_classes.controller.Controller.doAction(Controller.java:16)
+	at java_notebook/edu.examples.java_classes.input.command.request.ConsoleFindItemByDate.execute(ConsoleFindItemByDate.java:36)
+	at java_notebook/edu.examples.java_classes.input.command.navigation.ConsoleShowFindMenu.execute(ConsoleShowFindMenu.java:21)
+	at java_notebook/edu.examples.java_classes.input.command.request.ConsoleFindItemByDate.execute(ConsoleFindItemByDate.java:45)
+	at java_notebook/edu.examples.java_classes.input.command.navigation.ConsoleShowFindMenu.execute(ConsoleShowFindMenu.java:21)
+	at java_notebook/edu.examples.java_classes.input.command.request.ConsoleGetAllNotes.execute(ConsoleGetAllNotes.java:37)
+	at java_notebook/edu.examples.java_classes.input.command.navigation.ConsoleShowFindMenu.execute(ConsoleShowFindMenu.java:21)
+	at java_notebook/edu.examples.java_classes.input.command.navigation.ConsoleShowMainMenu.execute(ConsoleShowMainMenu.java:21)
+	at java_notebook/edu.examples.java_classes.input.ConsoleMenu.execute(ConsoleMenu.java:12)
+	at java_notebook/edu.examples.java_classes.start.Main.main(Main.java:26)
+Caused by: java.text.ParseException: Unparseable date: "dbdfb"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at java_notebook/edu.examples.java_classes.logic.impl.NotebookLogicImpl.findByDate(NotebookLogicImpl.java:112)
+	... 11 more
+
+Sept 30, 2023 3:26:27 PM edu.examples.java_classes.controller.impl.GetNoteCommand execute
+INFO: GET\s\?content=card
+Processed successfully
+Sept 30, 2023 3:26:35 PM edu.examples.java_classes.controller.impl.GetNoteCommand execute
+INFO: GET\s\?content=asdfbgffmnbfvdc
+Processed successfully
+Sept 30, 2023 3:26:49 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=flower/content=lilly/
+Processed successfully
+Sept 30, 2023 3:27:09 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=flower/content=tulip/
+Processed successfully
+Sept 30, 2023 3:27:35 PM edu.examples.java_classes.controller.impl.UpdateNoteCommand execute
+INFO: UPDATE\s\?id=1/title=cream/content=ziaja/
+Processed successfully
+Sept 30, 2023 3:27:51 PM edu.examples.java_classes.controller.impl.DeleteNoteCommand execute
+INFO: DELETE\s\?id=2
+Processed successfully
+Sept 30, 2023 3:28:05 PM edu.examples.java_classes.controller.impl.DeleteAllNotesCommand execute
+INFO: DELETE_ALL\s
+Processed successfully
+Sept 30, 2023 3:39:01 PM edu.examples.java_classes.controller.impl.GetNoteByTimeCommand execute
+WARNING: Error on resolve items by date
+java.text.ParseException: Fail on try to parse String ssfvsdfbsdb
+	at java_notebook/edu.examples.java_classes.logic.impl.NotebookLogicImpl.findByDate(NotebookLogicImpl.java:115)
+	at java_notebook/edu.examples.java_classes.controller.impl.GetNoteByTimeCommand.execute(GetNoteByTimeCommand.java:21)
+	at java_notebook/edu.examples.java_classes.controller.Controller.doAction(Controller.java:16)
+	at java_notebook/edu.examples.java_classes.input.command.request.ConsoleFindItemByDate.execute(ConsoleFindItemByDate.java:36)
+	at java_notebook/edu.examples.java_classes.input.command.navigation.ConsoleShowFindMenu.execute(ConsoleShowFindMenu.java:21)
+	at java_notebook/edu.examples.java_classes.input.command.navigation.ConsoleShowMainMenu.execute(ConsoleShowMainMenu.java:21)
+	at java_notebook/edu.examples.java_classes.input.ConsoleMenu.execute(ConsoleMenu.java:12)
+	at java_notebook/edu.examples.java_classes.start.Main.main(Main.java:27)
+
+Sept 30, 2023 4:42:58 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=box/content=heart-shaped box/
+Processed successfully
+Sept 30, 2023 4:43:24 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=material/content=paper/
+Processed successfully
+Sept 30, 2023 4:43:49 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=colour/content=pink/
+Processed successfully
+Sept 30, 2023 4:47:59 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=button/content=red button/
+Processed successfully
+Sept 30, 2023 4:48:39 PM edu.examples.java_classes.controller.impl.DeleteNoteCommand execute
+INFO: DELETE\s\?id=3
+Processed successfully
+Sept 30, 2023 4:49:02 PM edu.examples.java_classes.controller.impl.DeleteAllNotesCommand execute
+INFO: DELETE_ALL\s
+Processed successfully
+Sept 30, 2023 5:13:50 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=sport/content=running/
+Processed successfully
+Sept 30, 2023 5:14:12 PM edu.examples.java_classes.controller.impl.DeleteNoteCommand execute
+INFO: DELETE\s\?id=2
+Processed successfully
+Sept 30, 2023 5:14:38 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=toy/content=rabbit/
+Processed successfully
+Sept 30, 2023 5:33:53 PM edu.examples.java_classes.controller.impl.GetAllNotesCommand execute
+INFO: GET_ALL\s\?
+Processed successfully
+Sept 30, 2023 5:34:57 PM edu.examples.java_classes.controller.impl.GetAllNotesCommand execute
+INFO: GET_ALL\s\?
+Processed successfully
+Sept 30, 2023 5:55:13 PM edu.examples.java_classes.controller.impl.GetAllNotesCommand execute
+INFO: GET_ALL\s\?
+Processed successfully
+Sept 30, 2023 5:55:31 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=backpack/content=osprey/
+Processed successfully
+Sept 30, 2023 5:56:14 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=phrase/content=ololo/
+Processed successfully
+Sept 30, 2023 6:05:00 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=thing/content=baloon/
+Processed successfully
+Sept 30, 2023 6:05:25 PM edu.examples.java_classes.controller.impl.UpdateNoteCommand execute
+INFO: UPDATE\s\?id=11/title=animal/content=pes/
+Processed successfully
+Sept 30, 2023 6:06:19 PM edu.examples.java_classes.controller.impl.UpdateNoteCommand execute
+INFO: UPDATE\s\?id=9/title=kitchen staff/content=spoon/
+Processed successfully
+Sept 30, 2023 6:06:51 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=street/content=krucza/
+Processed successfully
+Sept 30, 2023 6:07:26 PM edu.examples.java_classes.controller.impl.DeleteNoteCommand execute
+INFO: DELETE\s\?id=12
+Processed successfully
+Sept 30, 2023 6:07:51 PM edu.examples.java_classes.controller.impl.DeleteAllNotesCommand execute
+INFO: DELETE_ALL\s
+Processed successfully
+Sept 30, 2023 6:08:20 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=garment/content=hat/
+Processed successfully
+Sept 30, 2023 6:08:48 PM edu.examples.java_classes.controller.impl.GetAllNotesCommand execute
+INFO: GET_ALL\s\?
+Processed successfully
+Sept 30, 2023 6:09:01 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=drink/content=martini/
+Processed successfully
+Sept 30, 2023 6:10:33 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=drink/content=vodka/
+Processed successfully
+Sept 30, 2023 6:10:50 PM edu.examples.java_classes.controller.impl.DeleteAllNotesCommand execute
+INFO: DELETE_ALL\s
+Processed successfully
+Sept 30, 2023 6:11:02 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=Drink/content=beer/
+Processed successfully
+Sept 30, 2023 6:11:43 PM edu.examples.java_classes.controller.impl.GetNoteByTimeCommand execute
+INFO: GET_TIME\s\?date=2023-09-28
+Processed successfully
+Sept 30, 2023 6:12:06 PM edu.examples.java_classes.controller.impl.PostNoteCommand execute
+INFO: POST\s\?title=beverage/content=vodka/
+Processed successfully

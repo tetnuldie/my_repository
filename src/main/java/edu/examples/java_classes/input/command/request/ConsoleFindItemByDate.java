@@ -7,7 +7,7 @@ import edu.examples.java_classes.input.command.MenuCommand;
 
 public class ConsoleFindItemByDate extends RequestCommand implements Executable {
 	private final MenuCommand parentMenu = MenuCommand.SHOW_SEARCH_MENU;
-	private final String method = "GET";
+	private final String method = "GET_TIME";
 	private String requestParameter = "date";
 
 	@Override

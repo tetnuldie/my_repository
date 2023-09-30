@@ -13,7 +13,7 @@ public class ConsoleShowEditMenu extends NavigationCommand implements Executable
         ConcreteMenu menu = super.menuSystem.getMenu(displayMenu);
         CommandProvider provider = CommandProvider.getInstance();
 
-        menuShown = 4;
+        menuShown = 3;
 
         int decision = super.makeChoice(menu);
 

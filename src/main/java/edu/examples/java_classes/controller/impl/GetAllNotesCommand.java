@@ -7,27 +7,25 @@ import edu.examples.java_classes.logic.LogicException;
 import java.util.List;
 import java.util.logging.Level;
 
-public class GetNoteCommand extends Command implements Executable {
-
+public class GetAllNotesCommand extends Command implements Executable {
     @Override
     public String execute(String request) {
         StringBuilder response = new StringBuilder();
-        String[] params;
         List<Note> newNote;
 
-        params = request.split(paramDelimiter);
-
         try {
-            newNote = super.logic.find(params[1]);
+            newNote = super.logic.getAllNotes();
             response.append("Processed successfully:" + "\n");
             for (Note n : newNote) {
                 response.append(n.toString()).append("\n");
             }
             commandLog.log(Level.INFO, request + "\nProcessed successfully");
         } catch (LogicException e) {
-            commandLog.log(Level.SEVERE, "Error on resolve items by context", e);
+            commandLog.log(Level.SEVERE, "Error on resolve all items", e);
             response.append("Something went wrong. Try again later");
         }
+
         return response.toString();
+
     }
 }

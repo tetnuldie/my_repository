@@ -16,6 +16,7 @@ public class CommandProvider {
 		commands.put(MenuCommand.SHOW_MAIN_MENU, new ConsoleShowMainMenu());
 		commands.put(MenuCommand.SHOW_SEARCH_MENU, new ConsoleShowFindMenu());
 		commands.put(MenuCommand.CREATE_NEW_ITEM, new ConsoleCreateNewItem());
+		commands.put(MenuCommand.GET_ALL_NOTES, new ConsoleGetAllNotes());
 		commands.put(MenuCommand.FIND_BY_DATE, new ConsoleFindItemByDate());
 		commands.put(MenuCommand.FIND_BY_CONTENT, new ConsoleFindItemByContent());
 		commands.put(MenuCommand.EDIT_NOTE_MENU, new ConsoleShowEditMenu());

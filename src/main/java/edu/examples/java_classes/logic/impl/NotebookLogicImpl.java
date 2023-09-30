@@ -99,7 +99,7 @@ public class NotebookLogicImpl implements NotebookLogic {
 
 
 
-    public List<Note> findByDate(String dateStr) throws LogicException {
+    public List<Note> findByDate(String dateStr) throws LogicException, ParseException {
 
         List<Note> result = new ArrayList<>();
 
@@ -112,7 +112,7 @@ public class NotebookLogicImpl implements NotebookLogic {
             Date date = df.parse(dateStr);
             dateToFind = date;
         } catch (ParseException e) {
-            throw new LogicException(e);
+            throw new ParseException("Fail on try to parse String "+dateStr, 1);
         }
 
         for (Note n : myNotes) {
@@ -173,8 +173,9 @@ public class NotebookLogicImpl implements NotebookLogic {
     public void updateFile(List<Note> notes) throws LogicException {
         delete();
         for (Note n : notes) {
-            add(n);
+            add(new Note(n.getTitle(), n.getContent(), n.getD()));
         }
     }
+
 
 }

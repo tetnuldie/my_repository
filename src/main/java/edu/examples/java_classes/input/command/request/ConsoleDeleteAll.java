@@ -7,7 +7,7 @@ import edu.examples.java_classes.input.command.MenuCommand;
 
 public class ConsoleDeleteAll extends RequestCommand implements Executable {
     private final MenuCommand parentMenu = MenuCommand.EDIT_NOTE_MENU;
-    private final String method = "DELETE";
+    private final String method = "DELETE_ALL";
 
     @Override
     public void execute() {

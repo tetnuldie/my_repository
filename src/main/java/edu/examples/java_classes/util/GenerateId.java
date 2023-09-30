@@ -1,13 +1,29 @@
 package edu.examples.java_classes.util;
 
+import edu.examples.java_classes.dao.DaoException;
+
+import static edu.examples.java_classes.dao.impl.FileNoteBookDao.getLastId;
+
 public final class GenerateId {
-	
-	private GenerateId() {}
-	
-	private static int nextId = 1;
-	
-	public static int nextId() {
-		return nextId++;
-	}
+
+    static {
+            nextId = getLastId()+1;
+    }
+
+    
+
+    private GenerateId() {
+    }
+
+    private static int nextId;
+
+    public static int nextId() {
+        return nextId++;
+    }
+
+    public static void reset(){
+        nextId = 1;
+    }
+
 
 }
