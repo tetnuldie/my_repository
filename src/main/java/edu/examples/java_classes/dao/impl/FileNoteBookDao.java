@@ -26,7 +26,9 @@ public class FileNoteBookDao implements NoteBookDao {
 
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(file, true))) {
 			bw.write(n.toString()+"\n");
+			commandLog.log(Level.INFO, "Processed save to file");
 		} catch (IOException e) {
+			commandLog.log(Level.SEVERE, "Error on save to file operation", e);
 			throw new DaoException(e);
 		}
 	}
@@ -45,8 +47,10 @@ public class FileNoteBookDao implements NoteBookDao {
 				notes.add(new Note(Integer.parseInt(parts[0]),parts[1],parts[2],date));
 			}
 		} catch (IOException | ParseException e) {
+			commandLog.log(Level.SEVERE, "Error on get data from file", e);
 			throw new DaoException(e);
 		}
+		commandLog.log(Level.INFO, "Processed read data from file");
 		return notes;
 	}
 
@@ -57,10 +61,12 @@ public class FileNoteBookDao implements NoteBookDao {
 		try {
 			FileWriter fileWriter = new FileWriter(file, false);
 			fileWriter.close();
-			GenerateId.reset();
+			commandLog.log(Level.INFO, "Processed delete data from file");
 
 		} catch (IOException e) {
+			commandLog.log(Level.SEVERE, "Error on Input/Output operation", e);
 			throw new DaoException(e);
+
 		}
 	}
 
@@ -75,6 +81,7 @@ public class FileNoteBookDao implements NoteBookDao {
 		} catch (IOException e) {
 			commandLog.log(Level.SEVERE, "Error on Input/Output operation", e);
 		}
+		commandLog.log(Level.INFO, "Processed getId data from file");
 		return id;
 	}
 
