@@ -10,7 +10,7 @@ public final class GenerateId {
             nextId = getLastId()+1;
     }
 
-    
+
 
     private GenerateId() {
     }
@@ -20,10 +20,5 @@ public final class GenerateId {
     public static int nextId() {
         return nextId++;
     }
-
-    public static void reset(){
-        nextId = 1;
-    }
-
 
 }
