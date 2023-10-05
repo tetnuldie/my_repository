@@ -9,7 +9,7 @@ public class ConsoleFindItemByContent extends RequestCommand implements Executab
 
     private final MenuCommand parentMenu = MenuCommand.SHOW_SEARCH_MENU;
     private final String method = "GET";
-    private String requestParameter = "content";
+    private final String requestParameter = "content";
 
     @Override
     public void execute() {
@@ -32,14 +32,14 @@ public class ConsoleFindItemByContent extends RequestCommand implements Executab
         sb.append(paramDelimiter);
         sb.append(request);
 
-        System.out.println(sb);
+        super.printString(sb.toString());
 
         response = super.controller.doAction(sb.toString());
 
         if (response.compareTo("Processed successfully:" + "\n") == 0) {
-            System.out.println("Nothing found");
+            super.printString("Nothing found");
         } else {
-            System.out.println(response);
+            super.printString(response);
         }
 
         Executable executable = provider.getCommand(parentMenu);

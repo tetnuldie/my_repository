@@ -30,10 +30,10 @@ public class ConsoleDeleteNote extends RequestCommand implements Executable {
         sb.append(paramDelimiter);
         sb.append(request);
 
-        System.out.println(sb);
+        super.printString(sb.toString());
 
         response = super.controller.doAction(sb.toString());
-        System.out.println(response);
+        super.printString(response);
 
 
         Executable executable = provider.getCommand(parentMenu);

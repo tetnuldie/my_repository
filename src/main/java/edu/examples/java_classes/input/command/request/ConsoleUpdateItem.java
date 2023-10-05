@@ -8,7 +8,7 @@ import edu.examples.java_classes.input.command.MenuCommand;
 public class ConsoleUpdateItem extends RequestCommand implements Executable {
     private final MenuCommand parentMenu = MenuCommand.EDIT_NOTE_MENU;
     private final String method = "UPDATE";
-    private String[] requestParams = {"id", "title", "content"};
+    private final String[] requestParams = {"id", "title", "content"};
 
     @Override
     public void execute() {
@@ -32,10 +32,11 @@ public class ConsoleUpdateItem extends RequestCommand implements Executable {
         }
 
 
-        System.out.println(sb);
+
+        super.printString(sb.toString());
 
         response = super.controller.doAction(sb.toString());
-        System.out.println(response);
+        super.printString(response);
 
 
         Executable executable = provider.getCommand(parentMenu);

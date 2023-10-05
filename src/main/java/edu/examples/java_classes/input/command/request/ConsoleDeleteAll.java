@@ -25,10 +25,10 @@ public class ConsoleDeleteAll extends RequestCommand implements Executable {
             sb.append(method);
             sb.append(methodDelimiter);
 
-            System.out.println(sb);
+            super.printString(sb.toString());
 
             response = super.controller.doAction(sb.toString());
-            System.out.println(response);
+            super.printString(response);
 
 
         }

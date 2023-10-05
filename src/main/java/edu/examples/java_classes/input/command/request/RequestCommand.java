@@ -28,4 +28,8 @@ public abstract class RequestCommand {
         return decision;
     }
 
+    protected void printString(String str){
+        display.printString(str);
+    }
+
 }

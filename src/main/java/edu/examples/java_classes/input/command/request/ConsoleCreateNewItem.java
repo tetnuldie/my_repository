@@ -9,7 +9,7 @@ public class ConsoleCreateNewItem extends RequestCommand implements Executable {
 
     private final MenuCommand parentMenu = MenuCommand.SHOW_MAIN_MENU;
     private final String method = "POST";
-    private String[] requestParams = {"title", "content"};
+    private final String[] requestParams = {"title", "content"};
 
 
     @Override
@@ -35,11 +35,11 @@ public class ConsoleCreateNewItem extends RequestCommand implements Executable {
         }
 
 
-        System.out.println(sb);
+        super.printString(sb.toString());
 
         response = super.controller.doAction(sb.toString());
 
-        System.out.println(response);
+        super.printString(response);
 
 
         Executable executable = provider.getCommand(parentMenu);

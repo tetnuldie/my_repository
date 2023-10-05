@@ -23,14 +23,14 @@ public class ConsoleGetAllNotes extends RequestCommand implements Executable{
         sb.append(methodDelimiter);
         sb.append(requestDelimiter);
 
-        System.out.println(sb);
+        super.printString(sb.toString());
 
         response = super.controller.doAction(sb.toString());
 
         if (response.compareTo("Processed successfully:" + "\n") == 0) {
-            System.out.println("Nothing found");
+            super.printString("Nothing found");
         } else {
-            System.out.println(response);
+            super.printString(response);
         }
 
         Executable executable = provider.getCommand(parentMenu);
